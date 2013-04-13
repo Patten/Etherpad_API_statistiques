@@ -3,10 +3,6 @@
 <?php
 
 class ApiTp{
-    /*private $_ip = '10.40.75.119';
-    private $_port = '9001';
-    private $_secretKey = 'JrtaylTYVpCLvxagurJaQT5JUNZE09Hf';
-    private $_padId = 'boby';*/
     private $_ip;
     private $_port;
     private $_secretKey;
@@ -14,9 +10,7 @@ class ApiTp{
     
     
     /*
-     *
-     * Pas de getters ni de setters pour gagner du temps sur le TP
-     *
+        Constructeur
      */
      public function __construct($ip, $port, $padId, $secretKey){
         $this->_ip = $ip;
@@ -33,19 +27,10 @@ class ApiTp{
     //    	- apiKey : clé secrète du pad
     //    	- padID
     public function getAllTextByPad(){
-    	/*$url ="http://".$this->_ip.":".$this->_port."/api/1.2.1/getText?apikey=".$this->_secretKey."&padID=".$this->_padId;
+    	$url ="http://".$this->_ip.":".$this->_port."/api/1.2.1/getText?apikey=".$this->_secretKey."&padID=".$this->_padId;
     	$json = file_get_contents($url); // Récupération du texte du pad au format json
     	$data = json_decode($json, TRUE); // transformation du json en tableau
-    	return utf8_decode($data['data']['text']);*/
-
-
-        return "Le Lorem Ipsum est simplement du faux texte employé dans la compo
-        sition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'im
-        primerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de tex
-        te pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'
-        est aussi adapté à la bureautique informatique sans que son contenu n'en soit modifié. Il a été popularisé dans les an
-        ées 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus réce
-        mment, par son inclusion dans des applications de mise en page de texte, comme Aldus";
+    	return utf8_decode($data['data']['text']);
     }
 
     // transforme un tableau en json
@@ -146,11 +131,4 @@ class ApiTp{
 
   	 
 }
-
-    //a metre dans le fichier index
-//$api = new ApiTp();
-//echo $api->nbWords();
-//echo $api->nbChars();
-//echo($api->longuestWord());
-//echo($api->getRepeatedWord($api->getAllTextByPad()));
 
